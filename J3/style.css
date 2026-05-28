@@ -1,0 +1,50 @@
+/* Reset minimal */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+/*===Mobile par défaut (< 768px)===*/
+.bar {
+    background: #2563eb;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background: #e5e7eb;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*===Tablette (≥ 768px)===*/
+@media (min-width: 768px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
+
+/*===Desktop (≥ 1024px)===*/
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(25% - 0.75rem);
+    }
+}

@@ -1,0 +1,56 @@
+
+
+/* Gabarit commun — tout ce qui ne change pas d'une boîte à l' autre */
+.boite {
+    width:
+        200px;
+    padding:
+        20px;
+    border:
+        5px solid;
+    margin-bottom:
+        20px;
+}
+
+/* Seul box-sizing diffère vraiment;
+les couleurs servent à distinguer A et B visuellement */
+
+.type-a {
+    box-sizing: content-box;
+    border-color: red;
+    background: lightyellow;
+}
+
+.type-b {
+    box-sizing: border-box;
+    border-color: blue;
+    background: lightcyan;
+}
+
+.parent {
+    width: 400px;
+    padding: 20px;
+    border: 5px solid purple;
+    margin-bottom: 20px;
+}
+
+.content-d {
+    box-sizing: content-box;
+    width: 100%;
+    padding: 20px;
+    border: 5px solid green;
+}
+
+.border-d {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border: 5px solid yellow;
+}
+
+/*
+A => 150px
+B => 250px, 200px de contenu interne
+C => 216px, 300px de contenu interne
+D => Le contenu devrait dépasse du parent
+*/

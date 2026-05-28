@@ -1,0 +1,23 @@
+body {
+            color: black;
+        }
+        
+        
+        .article {
+            color: gray;
+        }
+
+
+        [data-theme="dark"] .titre {
+            color: red;
+        }
+
+        article p {
+            color: darkblue;
+        }
+
+
+        article h2 {
+            color: green;
+
+        }

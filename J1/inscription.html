@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>DigiShop</h1>
+        <p><i>Céramique artisanale, faite main à Lyon</i></p>
+        <hr>
+        <nav>
+            <b>
+                <a href="exercice1.html">Accueil</a>
+                <a href="boutique.html">Boutique</a>
+                <a href="attributs-warmup.html" target="_blank">Warmup</a>
+                <a href="atelier.html">L'atelier</a>
+                <a href="contact.html">Contact</a>
+                <a href="inscription.html">Inscription</a>
+            </b>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <div class="card">
+            <form method="post" action="">
+                <h2>Créer un compte</h2>
+                <h5>Le texte en dessous</h5>
+                <b><label for="prenom">Prénom</label></b><br>
+                <input type="text" id="prenom" name="prenom" required minlength="2" placeholder="Nicolas"><br><br>
+                <b><label for="email">Email</label></b><br>
+                <input type="email" id="email" name="email" required placeholder="nico@bernard.fr"><br><br>
+                <b><label for="password">Mot de passe</label></b><br>
+                <input type="password" id="password" name="password" required placeholder="********"
+                    minlength="8"><br><br>
+                <b><label for="password_confirm">Confirmer le mot de passe</label></b><br>
+                <input type="password" id="password_confirm" name="password_confirm" required
+                    placeholder="********"><br><br>
+                <b><label for="birthday">Date de naissance</label></b><br>
+                <input type="date" id="birthday" name="birthday" required><br><br>
+                <b><label for="bio">Bio</label></b><br>
+                <textarea id="bio" name="bio" placeholder="Parlez-nous de vous..." maxlength="200"></textarea><br><br>
+                <label>
+                    <input class="input-checkbox" type="checkbox" id="cgu" name="cgu" required>J'accepte les <a
+                        href="cgv.html">CGU</a>
+                </label><br><br>
+                <button type="submit">S'inscrire</button>
+                <p>Déjà un compte ? <a href="contact.html">Connectez-vous</a></p>
+            </form>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <nav class="nav-footer">
+            <div>
+                © 2026 DigiShop
+            </div>
+
+
+            <div class="liens">
+                <a href="indexmentions-legales.html">Mentions légales</a>
+                <a href="cgv.html">CGV</a>
+                <a href="instagram.html">Instagram</a>
+            </div>
+
+        </nav>
+    </footer>
+    <script>
+        const pw1 = document.getElementById('password');
+        const pw2 = document.getElementById('password_confirm');
+
+        pw2.addEventListener('input', function () {
+            pw2.setCustomValidity(
+                pw1.value === pw2.value ? '' : 'Les mots de passe ne correspondent pas'
+            );
+        });
+    </script>
+</body>
+
+</html>

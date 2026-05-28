@@ -1,0 +1,27 @@
+.dashboard {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+.dashboard>header {
+    grid-area: header;
+}
+
+.dashboard>nav {
+    grid-area: sidebar;
+}
+
+.dashboard>main {
+    grid-area: main;
+}
+
+.dashboard>footer {
+    grid-area: footer;
+}

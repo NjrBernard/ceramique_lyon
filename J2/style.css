@@ -1,0 +1,17 @@
+/* Règle 1 — type, spécificité 0,0,1 */ 
+
+a {
+    color: blue;
+}
+
+/* Règle 2 — classe,spécificité 0,1,0 */ 
+
+.link-cta {
+    color: orange;
+}
+
+/* Règle 3 — id descendant+type,spécificité 1,0,1 */ 
+
+#content a{
+    color: green;
+}
